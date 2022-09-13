@@ -18,7 +18,7 @@
                         withLoginOnExternalBrowser: true, // Enable automatic login process
                     })
                     .then(() => {
-
+			window.location.href = 'http://www.naver.com/';
                         document.getElementById('qrcode').addEventListener('click', () => {
                             liff.scanCodeV2().then(result => {
 			    })
