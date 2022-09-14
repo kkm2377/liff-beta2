@@ -16,79 +16,79 @@ window.location.href = 'http://www.naver.com/';
                         withLoginOnExternalBrowser: true, 
                     })
                     .then(() => {
-			window.location.href = 'http://www.naver.com/';
-//                         document.getElementById('qrcode').addEventListener('click', () => {
-//                             liff.scanCodeV2().then(result => {
-// 			    })
-//                         });
+// 			window.location.href = 'http://www.naver.com/';
+                        document.getElementById('qrcode').addEventListener('click', () => {
+                            liff.scanCodeV2().then(result => {
+			    })
+                        });
 			
-// 			     liff.getProfile()
-//                             .then(function (profile) {
-//                                 document.getElementById('useridprofilefield').textContent = profile.userId;
-//                                 document.getElementById('displaynamefield').textContent = profile.displayName;
+			     liff.getProfile()
+                            .then(function (profile) {
+                                document.getElementById('useridprofilefield').textContent = profile.userId;
+                                document.getElementById('displaynamefield').textContent = profile.displayName;
 
-//                                 var profilePictureDiv = document.getElementById('profilepicturediv');
-//                                 if (profilePictureDiv.firstElementChild) {
-//                                     profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
-//                                 }
-//                                 var img = document.createElement('img');
-//                                 img.src = profile.pictureUrl;
-//                                 img.alt = "Profile Picture";
-//                                 img.width = 200;
-//                                 profilePictureDiv.appendChild(img);
+                                var profilePictureDiv = document.getElementById('profilepicturediv');
+                                if (profilePictureDiv.firstElementChild) {
+                                    profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
+                                }
+                                var img = document.createElement('img');
+                                img.src = profile.pictureUrl;
+                                img.alt = "Profile Picture";
+                                img.width = 200;
+                                profilePictureDiv.appendChild(img);
 
-//                                 document.getElementById('statusmessagefield').textContent = profile.statusMessage;
-//                             }).catch(function (error) {
-//                                 window.alert("Error getting profile: " + error);
-//                             });
+                                document.getElementById('statusmessagefield').textContent = profile.statusMessage;
+                            }).catch(function (error) {
+                                window.alert("Error getting profile: " + error);
+                            });
                     
 
                    
 
-//                         document.getElementById('add_to_home').addEventListener('click', () => {				
-// 				if (liff.isApiAvailable('addToHomeScreen')) {
-// 				    liff.addToHomeScreen({
-// 					name: "LINE",
-// 					iconUrl: "https://obs-beta.line-scdn.net/0hi2dU1wubNh1ZLCCnLGVJSntxPX9qTigWexgyezx-HU0oSQRLLjEmH3RQDVY_TwQ3LjUyJidHHkkyYAMgZiscAyB8DSw8dDc/f256x256",
-// 					state: "/search?q=foo"
-// 				    }).then((status) => {
+                        document.getElementById('add_to_home').addEventListener('click', () => {				
+				if (liff.isApiAvailable('addToHomeScreen')) {
+				    liff.addToHomeScreen({
+					name: "LINE",
+					iconUrl: "https://obs-beta.line-scdn.net/0hi2dU1wubNh1ZLCCnLGVJSntxPX9qTigWexgyezx-HU0oSQRLLjEmH3RQDVY_TwQ3LjUyJidHHkkyYAMgZiscAyB8DSw8dDc/f256x256",
+					state: "/search?q=foo"
+				    }).then((status) => {
 
-// 				    }).catch(function(res) {
-// 				      console.log("Failed to launch addToHomeScreen")
-// 				    })
-// 				}else {
-// 				      console.log("isApiAvailable Error")
-// 				}
-// 			});
+				    }).catch(function(res) {
+				      console.log("Failed to launch addToHomeScreen")
+				    })
+				}else {
+				      console.log("isApiAvailable Error")
+				}
+			});
 			
 			
 		
 			
-// 			document.getElementById('subwindow').addEventListener('click', () => {
-// 					liff.subWindow.open({
-// 						url: 'https://liff.line.me/1655828362-KLxYgqxg/example.html',
+			document.getElementById('subwindow').addEventListener('click', () => {
+					liff.subWindow.open({
+						url: 'https://liff.line.me/1655828362-KLxYgqxg/example.html',
 
-// 					})
+					})
 
-// 			});
+			});
 			
 
 			
-// 			document.getElementById('iab').addEventListener('click', () => {
-// 					liff.openWindow({
-// 					  url: "https://liff-real.herokuapp.com/",
-// 					  external: false,
-// 					});
+			document.getElementById('iab').addEventListener('click', () => {
+					liff.openWindow({
+					  url: "https://liff-real.herokuapp.com/",
+					  external: false,
+					});
 
-// 			});
+			});
 			
-// 			document.getElementById('external').addEventListener('click', () => {
-// 					liff.openWindow({
-// 					  url: "https://liff.line.me/1655828362-KLxYgqxg",
-// 					  external: true,
-// 					});
+			document.getElementById('external').addEventListener('click', () => {
+					liff.openWindow({
+					  url: "https://liff.line.me/1655828362-KLxYgqxg",
+					  external: true,
+					});
 
-// 			});
+			});
 
                 })
             });
