@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <title>LIFF-Sample</title>
 <!-- <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> -->
-	    <script charset="utf-8" src="https://line-objects-internal.com/assets/liff/edge/2/sdk.js"></script>
+	  <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1/luivendor.js"></script>
+<!-- 	    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1//lui-navigation-back.js"></script> -->
+	    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1//lui-navigation-bar.js"></script>
+	<script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1//lui-orientation-guard.js"></script>
+        <script charset="utf-8" src="https://line-objects-internal.com/liff/edge/versions/2.11.1/sdk.js"></script>
 	    
         <script defer type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
@@ -97,6 +101,12 @@
     </head>
     
     <body>
+	<lui-navigation-bar>
+	  <lui-navigation-back slot="left"></lui-navigation-back>
+	  <span slot="center">first display</span>
+<!-- 	  <a href="#" slot="right">OK</a> -->
+	</lui-navigation-bar>
+	    
     <h3 id="displaynamefield"></h3>
 
    <div id="profileinfo">
@@ -125,7 +135,7 @@
                 <input type="button" id="iab" value="IAB"/>
 	        <input type="button" id="external" value="External_Browser"/>
                 <a href="https://liff.line-beta.me/1651833066-zO3vlq60">LIFF_Transition</a>
-	    	<a href="https://liff.line.me/1655828362-KLxYgqxg/liff/line">liff/line</a>
+	    	<a href="https://liff.line-beta.me/1651833066-jMBY9PDJ/liff">liff/line</a>
 		<a href="foo://bar">Bullshit</a>
 	    	<a href="javascript:void(0)" onclick="window.open('http://www.naver.com')">link text</a>
     </body>
