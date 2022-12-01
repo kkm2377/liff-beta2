@@ -107,6 +107,14 @@
 <!-- 	  <a href="#" slot="right">OK</a> -->
 	</lui-navigation-bar>
 	    
+	    	<div id="log"></div>
+	<button @click=${() => manualNavigate()}>manualNavigation</button>
+        <lui-orientation-guard message="スマートフォンを縦にしてご利用ください" style="--lui-orientation-guard-background-color: #fff;
+         --lui-orientation-guard-text-color: #999;
+         --lui-orientation-guard-icon-color: #d0d0d0;
+         --lui-orientation-guard-z-index: 9999;
+  "></lui-orientation-guard>
+	    
     <h3 id="displaynamefield"></h3>
 
    <div id="profileinfo">
