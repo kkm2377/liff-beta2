@@ -102,7 +102,7 @@
     </head>
     
     <body>
-<lui-navigation-bar level="lui.isAndroidNavigationBar ? 1 : 2" platform="auto" menuStyle="light-icon">
+<lui-navigation-bar level="1" platform="auto" menuStyle="light">
   <div slot="left">
     <lui-navigation-back/>
     <cp-button v-if="!liff.lui.isAndroidNavigationBar">setting</cp-button>
@@ -110,7 +110,7 @@
   <span slot="center">very </span>
   <div slot="right">
     <cp-button>favorite</cp-button>
-    <cp-button v-if="liff.lui.isAndroidNavigationBar">setting</cp-button>
+<!--     <cp-button v-if="liff.lui.isAndroidNavigationBar">setting</cp-button> -->
   </div>
 </lui-navigation-bar>
 <!--         <lui-orientation-guard message="スマートフォンを縦にしてご利用ください" style="--lui-orientation-guard-background-color: #fff;
