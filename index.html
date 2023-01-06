@@ -9,7 +9,7 @@
 <!-- 	    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1//lui-navigation-back.js"></script> -->
 	    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1/lui-navigation-bar.js"></script>
 	<script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1/lui-orientation-guard.js"></script>
-<!-- 	    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1/lui-icon.js"></script> -->
+	    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.11.1/lui-icon.js"></script>
         <script charset="utf-8" src="https://line-objects-internal.com/assets/liff/edge/versions/2.19.0/sdk.js"></script>
 	<link href="https://static.line-scdn.net/laicon/edge/15.1/laicon.min.css" rel="stylesheet">	    
         <script defer type="text/javascript">
@@ -102,16 +102,17 @@
     </head>
     
     <body>
-	<lui-navigation-bar title="This is title prop" menu-style="Light" level="2">
-	  <lui-navigation-back slot="left"></lui-navigation-back>
-<!-- 	  <span slot="center">first display</span> -->
-	  <a href="#" slot="right">OK</a>
-<!-- 	<span class="lar la-regular la-arrow-to-down"></span> -->
-	</lui-navigation-bar>
-<!-- 	 <span class="lar la-regular la-arrow-to-down"></span> -->
-	    
-	<div id="log"></div>
-	<button @click=${() => manualNavigate()}>manualNavigation</button>
+<lui-navigation-bar level="lui.isAndroidNavigationBar ? 1 : 2" platform="auto" menuStyle="light-icon">
+  <div slot="left">
+    <lui-navigation-back/>
+    <cp-button v-if="!liff.lui.isAndroidNavigationBar">setting</cp-button>
+  </div>
+  <span slot="center">very long titleeeeeeeeeeeeee</span>
+  <div slot="right">
+    <cp-button>favorite</cp-button>
+    <cp-button v-if="liff.lui.isAndroidNavigationBar">setting</cp-button>
+  </div>
+</lui-navigation-bar>
 <!--         <lui-orientation-guard message="スマートフォンを縦にしてご利用ください" style="--lui-orientation-guard-background-color: #fff;
          --lui-orientation-guard-text-color: #999;
          --lui-orientation-guard-icon-color: #d0d0d0;
