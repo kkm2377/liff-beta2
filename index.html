@@ -124,7 +124,9 @@
 					
 					document.getElementById('demo').innerHTML = '<ul>' + txt + '</ul>';
 				}
-			}
+			};
+			xhttp.open('get','cd_catalog.xml',true);
+			xhttp.send();
 			
 		}
             
