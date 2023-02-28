@@ -16,7 +16,7 @@
             document.addEventListener("DOMContentLoaded", () => {
 		
 		    
-	    	alert(window.location.hash);
+	    	alert(window.location.href);
 		    
                 liff
                     .init({
@@ -25,7 +25,7 @@
                     })
                     .then(() => {
 			liff.ready.then(() => {
-				alert(window.location.hash);
+				alert(window.location.href);
 			})
 			
                         document.getElementById('qrcode').addEventListener('click', () => {
