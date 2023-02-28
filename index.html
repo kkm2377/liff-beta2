@@ -14,7 +14,12 @@
 	<link href="https://static.line-scdn.net/laicon/edge/15.1/laicon.min.css" rel="stylesheet">	    
         <script defer type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
-		    alert(window.location.href);
+		var x = window.location.href;
+		console.log(x); // #menuul
+		    
+	    	var x = location.hash;
+		console.log(y); // #menuul
+		    
                 liff
                     .init({
                         liffId: "1651833066-jMBY9PDJ",
@@ -176,6 +181,10 @@
 	    <tr>
                 <th>AJAX_consol</th>
                 <td id="demo"></td>
+            </tr>
+	    <tr>
+                <th>location</th>
+                <td id="location"></td>
             </tr>
         </table>
     </div>
