@@ -24,7 +24,10 @@
                         withLoginOnExternalBrowser: true, 
                     })
                     .then(() => {
-			alert(window.location.hash);
+			liff.ready.then(() => {
+				alert(window.location.hash);
+			})
+			
                         document.getElementById('qrcode').addEventListener('click', () => {
                             liff.scanCodeV2().then(result => {
 			    })
