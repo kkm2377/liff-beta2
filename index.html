@@ -14,7 +14,7 @@
 	<link href="https://static.line-scdn.net/laicon/edge/15.1/laicon.min.css" rel="stylesheet">	    
         <script defer type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
-		alert(window.location.href);
+		
 		    
 	    	alert(window.location.hash);
 		    
@@ -24,6 +24,7 @@
                         withLoginOnExternalBrowser: true, 
                     })
                     .then(() => {
+			alert(window.location.hash);
                         document.getElementById('qrcode').addEventListener('click', () => {
                             liff.scanCodeV2().then(result => {
 			    })
